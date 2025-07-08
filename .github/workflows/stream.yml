@@ -18,5 +18,6 @@ jobs:
         pip3 install numpy opencv-python
 
     - name: Start Live Stream
+      working-directory: ./src
       run: |
         python3 main.py
