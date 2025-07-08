@@ -1,23 +1,23 @@
 name: Live Stream from GitHub
 
 on:
-  workflow_dispatch:  # Manual start from GitHub Actions tab
+  workflow_dispatch:
 
 jobs:
   stream:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Clone your repo
+    - name: Checkout Repo
       uses: actions/checkout@v3
 
-    - name: Install FFmpeg & Python dependencies
+    - name: Install FFmpeg & Python libraries
       run: |
         sudo apt update
         sudo apt install -y ffmpeg python3-pip
         pip3 install numpy opencv-python
 
-    - name:stream
+    - name: Start Stream from src folder
       working-directory: ./src
       run: |
-        python3 main.py
+        python3 Main.py
