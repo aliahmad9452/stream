@@ -1,0 +1,6 @@
+opencv-python
+numpy
+Pillow
+arabic-reshaper
+python-bidi
+requests
